@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMING</title>
+<title>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMEING</title>
 <link rel="stylesheet" href="../style.css">
 <style>
 body {
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #09090b);
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 60%, #020617 100%);
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
@@ -15,23 +15,39 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
+}
+
+/* اسم ASO GAMING كخلفية جمالية (Watermark) */
+.bg-watermark {
+    position: absolute;
+    font-size: 11vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.025);
+    text-transform: uppercase;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: 5px;
+    white-space: nowrap;
 }
 
 .glass-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 20px;
-    padding: 40px;
-    width: 80%;
-    max-width: 700px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 45px;
+    width: 85%;
+    max-width: 750px;
     text-align: center;
+    z-index: 1;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin: 10px 0;
     font-weight: 600;
     letter-spacing: 1px;
@@ -40,27 +56,46 @@ h1 {
 hr {
     border: 0;
     height: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     margin: 20px 0;
 }
 
 #msgs {
-    font-size: 26px;
+    font-size: 24px;
     color: #38bdf8;
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-    margin: 30px 0;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    margin: 25px 0;
+    font-weight: 500;
 }
 
 .brand-center {
-    font-size: 32px;
+    font-size: 34px;
     color: #f43f5e;
-    text-shadow: 0 0 15px rgba(244, 63, 94, 0.6);
-    margin: 20px 0;
-    font-weight: bold;
+    text-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+    margin: 15px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.phone-number {
+    font-size: 20px;
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+    letter-spacing: 1px;
 }
 </style>
 </head>
 <body>
+
+<!-- خلفية اسم ASO GAMING -->
+<div class="bg-watermark">ASO GAMING</div>
+
 <script>
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
@@ -151,10 +186,11 @@ if (!isPS4) {
 </script>
 
 <div class="glass-container">
-    <h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMING</h1>
+    <h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMEING</h1>
     <hr>
     <div class="brand-center">LD GHOST</div>
     <div id="msgs">Loading GoldHEN v2.4b18.12... Please Wait</div>
+    <div class="phone-number">07510646547</div>
 </div>
 
 </body>
