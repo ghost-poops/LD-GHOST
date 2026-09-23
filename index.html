@@ -1,28 +1,90 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <title>PS4 Exploit Host by ASO GAMING</title>
-<link rel="stylesheet" href="style.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .container {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 40px 60px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 2px solid #f31414;
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    .brand {
+        color: #f31414;
+        text-shadow: 0 0 10px rgba(243, 20, 20, 0.5);
+    }
+    p {
+        color: #aaa;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .btn-auto {
+        background: #f31414;
+        color: #fff;
+        border: none;
+        padding: 15px 35px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 15px rgba(243, 20, 20, 0.4);
+        text-decoration: none;
+        display: inline-block;
+    }
+    .btn-auto:hover {
+        background: #d01111;
+        box-shadow: 0 0 25px rgba(243, 20, 20, 0.8);
+        transform: scale(1.05);
+    }
+    .loader {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #ffeb3b;
+    }
+</style>
 </head>
-<body onload="location.replace('g2all/index.html')">
+<body onload="autoRedirect()">
+
 <script>
-var histlength=history.length;history.go(-histlength 2);
+var histlength = history.length;
+history.go(-histlength + 2);
+
+function autoRedirect() {
+    setTimeout(function() {
+        location.replace('g2all/index.html');
+    }, 1500);
+}
 </script>
-<h1 id=msgs>PS4 Exploit Host by ASO GAMING</h1>
-<hr>
-<br>
-<div id=menu>
-<h1 style="font-size: 18px;color: yellow;">Select Your Firmware</h1>
-<button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
-<button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'" onclick="location.replace('505/index.html')"> 5.05 FW v2.5 </button>
-<a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'"> 6.72 FW GoldHEN </button></a>
-<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'"> 6.72 FW v3.0 </button></a>
-<br>
-<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'"> 9.00 FW GoldHEN </button></a>
-<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'"> 9.00 FW v3.0 </button></a>
-<br>
-<button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Exploit Host by ASO GAMING'" onclick="location.replace('restore/index.html')"> Restore Host </button>
-<br>
-<h1 style="margin-top: 78px;">Designed by: <span style="color: #f31414;margin-left: 10px;margin-right: 10px;">ASO GAMING</span></h1>
+
+<div class="container">
+    <h1>PS4 Exploit Host</h1>
+    <p>Designed by <span class="brand">ASO GAMING</span></p>
+    
+    <a href="g2all/index.html" class="btn-auto">Auto Exploit</a>
+    
+    <div class="loader">Loading Auto Exploit...</div>
 </div>
+
 </body>
 </html>
