@@ -1,23 +1,121 @@
 <!DOCTYPE html>
 <html manifest="700.manifest">
 <head>
+<meta charset="UTF-8">
 <title>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMING</title>
 <link rel="stylesheet" href="../style.css">
+<style>
+body {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 40%, #1e1b4b 80%, #311042 100%);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-watermark {
+    position: absolute;
+    font-size: 9vw;
+    font-weight: 900;
+    color: rgba(56, 189, 248, 0.03);
+    text-transform: uppercase;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    text-shadow: 0 0 30px rgba(56, 189, 248, 0.05);
+}
+
+.glass-container {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(56, 189, 248, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 35px 45px;
+    width: 85%;
+    max-width: 720px;
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 4px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #e2e8f0;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.5), transparent);
+    margin: 15px 0;
+}
+
+#msgs {
+    font-size: 24px;
+    color: #38bdf8;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    margin: 25px 0;
+    font-weight: 700;
+}
+
+.brand-center {
+    font-size: 24px;
+    color: #f43f5e;
+    text-shadow: 0 0 20px rgba(244, 63, 94, 0.7);
+    margin-top: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+</style>
 </head>
 <body>
+
+<div class="bg-watermark">ASO GAMING</div>
+
 <script>
-history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){window.msgs.innerHTML="Cache Installed Successfully ✔";setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},1500);}
-window.applicationCache.addEventListener("progress",DLProgress,false);
-window.applicationCache.oncached=function(e){DisplayCacheProgress();};
-window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-window.applicationCache.onerror=function(e){window.msgs.innerHTML="Error Installing Cache! - Clear and Re-Open Your Browser ...";};
+history.replaceState(null, null, 'index.html');
+var histlength = history.length;
+history.go(-histlength);
+
+function DLProgress(e) {
+    Percent = (Math.round(e.loaded / e.total * 100));
+    window.msgs.innerHTML = "Installing Offline Cache: " + Percent + "%";
+}
+
+function DisplayCacheProgress() {
+    window.msgs.innerHTML = "Cache Installed Successfully ✔";
+    setTimeout(function() {
+        window.msgs.innerHTML = "Now Close And Re-Open Your Browser ...";
+    }, 1500);
+}
+
+window.applicationCache.addEventListener("progress", DLProgress, false);
+window.applicationCache.oncached = function(e) { DisplayCacheProgress(); };
+window.applicationCache.onupdateready = function(e) { DisplayCacheProgress(); };
+window.applicationCache.onerror = function(e) {
+    window.msgs.innerHTML = "Error Installing Cache! - Clear and Re-Open Your Browser ...";
+};
 </script>
-<h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMING</h1>
-<hr>
-<br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Starting Cache Installation...</h1>
-<h1 style="margin-top: 43px;">Developed by: <span style="color: #f31414;margin-left: 10px;margin-right: 10px;">ASO GAMEING</span></h1>
+
+<div class="glass-container">
+    <h1>PS4 [5.05] 7.00 - 13.52 FW GoldHEN Host by ASO GAMING</h1>
+    <hr>
+    <div id="msgs">Starting Cache Installation...</div>
+    <hr>
+    <div class="brand-center">Developed by: ASO GAMING</div>
+</div>
+
 </body>
 </html>
